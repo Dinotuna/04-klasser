@@ -60,5 +60,78 @@
 
 
 
+
+
+static void CreateHardware()
+{
+    int result;
+    List<Hardware> hardwares = new();
+
+    Console.WriteLine("Du ska skapa en hårdvara");
+    Console.WriteLine("Skriv 1 för Hårddisk, 2 för proccesor, 3 för grafikkort");
+
+    while(true) 
+    {
+        string val = Console.ReadLine();
+
+        if(int.TryParse(val, out result) && result == 1)
+        { 
+            Console.WriteLine("Du har valt hårddisk");
+
+            Console.WriteLine("Vad ska den heta?");
+            string n = Console.ReadLine();
+
+            Console.WriteLine("Vad ska den kosta?");
+            int p = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Hur mycket utrymme ska hårdisken ha");
+            int s = int.Parse(Console.ReadLine());
+            hardwares.Add(new HardDrive(n, p, s));
+        }
+
+        else if(int.TryParse(val, out result) && result == 2)
+        {
+            Console.WriteLine("Du har valt proccesor");
+
+            Console.WriteLine("Vad ska den heta?");
+            string n = Console.ReadLine();
+
+            Console.WriteLine("Vad ska den kosta?");
+            int p = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Hur mycket utrymme ska proccesorn ha");
+            int c = int.Parse(Console.ReadLine());
+            hardwares.Add(new CPU(n, p, c));
+
+        }
+
+        else if(int.TryParse(val, out result) && result == 3)
+        {
+            Console.WriteLine("Du har valt grafikkortet");
+
+            Console.WriteLine("Vad ska den heta?");
+            string n = Console.ReadLine();
+
+            Console.WriteLine("Vad ska den kosta?");
+            int p = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Hur mycket utrymme ska grafikkortet ha");
+            int m = int.Parse(Console.ReadLine());
+            hardwares.Add(new GPU(n, p, m));
+        }
+
+        else 
+        {
+            Console.WriteLine("Skriv ett tal som är mellan 1-3");
+        }
+
+    }
+
+}
+
+CreateHardware();
+
+
+
 Console.ReadLine();
 
