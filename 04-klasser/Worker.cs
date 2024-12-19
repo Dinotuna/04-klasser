@@ -11,23 +11,27 @@ public class Worker
         wage = 10;
     }
 
-    public int SetWage()
+    public void SetWage(int newWage)
     {
-        return wage;
+        wage = newWage;
+        Console.WriteLine(newWage);
     }
 
     public string GetName()
     {
+        Console.WriteLine(name);
         return name;
     }
 
     public int GetAge()
     {
+        Console.WriteLine(age);
         return age;
     }
 
     public int GetWage()
     {
+        System.Console.WriteLine(wage);
         return wage;
     }
 

@@ -46,6 +46,16 @@
 //     rocks.Add(new Rock(i));
 // }
 
+// Worker w1 = new Worker();
+// WhiteCollar w2 = new WhiteCollar();
+// BlueCollar w3 = new BlueCollar();
+
+
+
+// w1.SetWage(100);
+// w1.GetWage();
+// w1.GetName();
+// w1.GetAge();
 
 
 
